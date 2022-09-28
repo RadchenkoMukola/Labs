@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <vector>
 
 using namespace std;
 
@@ -6,9 +9,9 @@ class Figure {
  
     public:
  
-        virtual double calc_square() const = 0;
+        virtual double calc_area() const = 0;
         virtual double calc_perimeter() const = 0;
-       // virtual double calc_secdot() const = 0;
+        virtual vector<double> calc_specdot() const = 0;
         virtual string calc_type() const = 0;
         virtual string calc_vyp()  const = 0;
 };
@@ -52,9 +55,9 @@ class Triangle: public Figure {
     public:
  
  
-        double calc_square() const {
-            double s;
-            s = fabs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2.0;
+        double calc_area() const
+      {
+            double s = fabs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2.0;
             return s;
         }
  
@@ -106,12 +109,17 @@ class Triangle: public Figure {
           return s;
         }
 
-         double calc_secdot() const 
+         vector<double> calc_specdot() const 
          {
+            vector<double> m;
             double xm, ym;
-              xm = (x1 + x2 + x3) / 3;
-              ym = (y1 + y2 + y3) / 3;
-              cout << "Точка перетину медіан M("<<xm<<","<<ym<<")"<<endl;
+            double d = 2*(x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2));
+            xm = ((x1*x1 + y1*y1)*(y2-y3) + (x2*x2 + y2*y2)*(y3-y1) + (x3*x3 + y3*y3)*(y1-y2))/d;
+            ym = ((x1*x1 + y1*y1)*(x3-x2) + (x2*x2 + y2*y2)*(x1-x3) + (x3*x3 + y3*y3)*(x2-x1))/d;
+            m.push_back(xm);
+            m.push_back(ym);
+            cout << "Центр вписаного кола ";
+            return m;
           }
          string calc_vyp() const{
            string s;
@@ -132,7 +140,7 @@ class Circle: public Figure {
     public:
  
  
-        double calc_square() const 
+        double calc_area() const 
         {  
           double s;
            s = M_PI * r * r;
@@ -145,9 +153,13 @@ class Circle: public Figure {
             p = 2 * M_PI * r;
             return p;
         }
-        double calc_secdot() const 
+        vector<double> calc_specdot() const 
          {
-           cout<<"Центр кола M("<<x<<","<<y<<")"<<endl;
+           vector<double> m;
+           m.push_back(x);
+           m.push_back(y);
+           cout << "Центр кола ";
+           return m;
          }
         string calc_type() const 
         {
@@ -174,7 +186,7 @@ class Parallelogram: public Figure {
         
     public:
   
-     double calc_square() const
+     double calc_area()  const
      {
        double S;
        S = (abs((xa-xb)*(ya+yb)+(xb-xc)*(yb+yc)+(xc-xd)*(yc+yd)+(xd-xa)*(yd+ya)))/2;
@@ -231,10 +243,11 @@ class Parallelogram: public Figure {
           }
       return s;
         }
-      void calc_secdot() const
+      vector<double> calc_specdot() const
       {
         float n;
         double a = 0,b = 0;
+        vector<double> m;
         if (yc - ya != 0) 
         {  
         float q = (xc - xa) / (ya - yc);   
@@ -248,7 +261,11 @@ class Parallelogram: public Figure {
     }
        a = xb + (xd - xb) * n; 
        b = yb + (yd - yb) * n;
-       cout << "Точка перетину діагоналей M("<<a<<","<<b<<")"<<endl;
+      m.push_back(a);
+      m.push_back(b);
+      cout << "Центр Перетину діагоналей ";
+      return m;
+      
    }
 
     string calc_vyp() const
@@ -301,7 +318,7 @@ class Pkutnuk: public Figure {
         
     public:
   
-     double calc_square() const
+     double calc_area()  const
      {
        double S;
        S = (abs((xa-xb)*(ya+yb)+(xb-xc)*(yb+yc)+(xc-xd)*(yc+yd)+(xd-xe)*(yd+ye)+(xe-xa)*(ye-ya)))/2;
@@ -326,12 +343,16 @@ class Pkutnuk: public Figure {
       }
  
         
-      void calc_secdot() const
+      vector<double> calc_specdot() const
       {
         double xm = 0,ym = 0;
+        vector<double> m;
         xm = (xa+xb+xc+xd+xe)/5;
         ym = (ya+yb+yc+yd+ye)/5;
-        cout << "Центр масс M("<<xm<<","<<ym<<")"<<endl;
+        m.push_back(xm);
+        m.push_back(ym);
+        cout << "Центр мас п'ятикутника ";
+        return m;
       }
     string calc_vyp() const
      { 
@@ -376,6 +397,7 @@ Figure* insert(Figure* figur)
 
       if ( x == 1)
                 {
+                  cout << "Введіть координати трьох точок"<<endl;
                   cout << "Введіть x1 ="; cin >> x1;cout <<endl;
                   cout << "Введіть y1 ="; cin >> y1;cout <<endl;
                   cout << "Введіть x2 ="; cin >> x2;cout <<endl;
@@ -386,6 +408,7 @@ Figure* insert(Figure* figur)
                 }
             else if (x == 2)
             {
+                  cout << "Введіть координати чотирьох точок"<<endl;
                   cout << "Введіть x1 ="; cin >> x1;cout <<endl;
                   cout << "Введіть y1 ="; cin >> y1;cout <<endl;
                   cout << "Введіть x2 ="; cin >> x2;cout <<endl;
@@ -399,6 +422,7 @@ Figure* insert(Figure* figur)
             }
             else if (x == 3)
             {
+                  cout << "Введіть координати п'яти точок"<<endl;
                   cout << "Введіть x1 ="; cin >> x1;cout <<endl;
                   cout << "Введіть y1 ="; cin >> y1;cout <<endl;
                   cout << "Введіть x2 ="; cin >> x2;cout <<endl;
@@ -413,7 +437,8 @@ Figure* insert(Figure* figur)
 
             }
             else if (x == 4)
-            {
+            {     
+                  cout << "Введіть координати центру та радіус"<<endl;
                   cout << "Введіть x ="; cin >> x1;cout <<endl;
                   cout << "Введіть y ="; cin >> y1;cout <<endl;
                   cout << "Введіть радіус r =";cin >> x2;cout <<endl;
@@ -423,25 +448,32 @@ Figure* insert(Figure* figur)
   return figur;
 }
 
-void checkfigure(Figure* figur)
+void showfigure(Figure* figur)
    {
      double p,a;
      string t,v;
-                       cout <<"Figure info"<<endl;
-                       cout <<"==========="<<endl;
+     vector<double> m;
+                       cout <<"Інформація про фігуру"<<endl;
+                       cout <<"====================="<<endl;
 
                        cout << "\nSquare: ";
-                       a = figur->calc_square();
+                       a = figur->calc_area();
                        cout << a <<endl;
-                       cout << "Perimeter: ";
+                       cout << "Периметр: ";
                        p =figur->calc_perimeter();
                        cout << p <<endl;
-                       cout << "Type: ";
+                       cout <<"Тип: ";
                        t =figur->calc_type();
                        cout << t <<endl;
-                       //cout << "Specdot: ";
-                       //figur->calc_secdot();
-                       cout <<"Vyp: ";
+                       cout << "Спеціальна точка: ";
+                       m = figur->calc_specdot();
+                       cout << "M( ";
+                       for(int i = 0;i < m.size();i++)
+                         {
+                           cout << m[i]<<" ";
+                         }
+                        cout <<")"<<endl;                     
+                       cout <<"Опуклість: ";
                        v = figur->calc_vyp();
                        cout << v <<endl;
                 
@@ -455,7 +487,7 @@ int main()
      Figure** figure = new Figure*[1];
      Check f1;
      figure[1] = f1.insert(figure[1]);
-     f1.checkfigure(figure[1]);
+     f1.showfigure(figure[1]);
   
      delete figure[1];
      
