@@ -52,19 +52,19 @@ public:
         }
         if (t == 1)
         {
-            s = "Прямокутник";
+            s = "РџСЂСЏРјРѕРєСѓС‚РЅРёРє";
         }
         else if (t == 2)
         {
-            s = "Паралелограмм";
+            s = "РџР°СЂР°Р»РµР»РѕРіСЂР°РјРј";
         }
         else if (t == 3)
         {
-            s = "Трапеція";
+            s = "РўСЂР°РїРµС†С–СЏ";
         }
         else if (t == 4)
         {
-            s = "Довільний чоририкутник";
+            s = "Р”РѕРІС–Р»СЊРЅРёР№ С‡РѕСЂРёСЂРёРєСѓС‚РЅРёРє";
         }
         return s;
     }
@@ -88,7 +88,7 @@ public:
         b = yb + (yd - yb) * n;
         m.push_back(a);
         m.push_back(b);
-        cout << "Центр Перетину діагоналей ";
+        cout << "Р¦РµРЅС‚СЂ РџРµСЂРµС‚РёРЅСѓ РґС–Р°РіРѕРЅР°Р»РµР№ ";
         return m;
 
     }
@@ -99,7 +99,7 @@ public:
         double	l = calculate_triangle(xc, xb, xa, yc, yb, ya);
         double  m = calculate_triangle(xd, xb, xa, yd, yb, ya);
         if (l * m < 0) {
-            s = "Не опуклий";
+            s = "РќРµ РѕРїСѓРєР»РёР№";
             return s;
 
         }
@@ -108,25 +108,25 @@ public:
         w = calculate_triangle(xd, xc, xb, yd, yc, yb);
         if (q * w < 0)
         {
-            s = "Не опуклий";
+            s = "РќРµ РѕРїСѓРєР»РёР№";
             return s;
         }
         double p, r;
         p = calculate_triangle(xa, xd, xc, ya, yd, yc);
         r = calculate_triangle(xb, xd, xc, yb, yd, yc);
         if (p * r < 0) {
-            s = "Не опуклый";
+            s = "РќРµ РѕРїСѓРєР»С‹Р№";
             return s;
         }
         double j, k;
         j = calculate_triangle(xb, xa, xd, yb, ya, yd);
         k = calculate_triangle(xc, xa, xd, yc, ya, yd);
         if (j * k < 0) {
-            s = "Не опуклый";
+            s = "РќРµ РѕРїСѓРєР»С‹Р№";
             return s;
         }
 
-        s = "Опуклый";
+        s = "РћРїСѓРєР»С‹Р№";
         return s;
     }
 
