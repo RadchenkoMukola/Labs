@@ -31,19 +31,19 @@ public:
         vector<double> m;
         m.push_back(x);
         m.push_back(y);
-        cout << "Öåíòð êîëà ";
+        cout << "Ð¦ÐµÐ½Ñ‚Ñ€ ÐºÐ¾Ð»Ð° ";
         return m;
     }
     string calc_type() const
     {
         string s;
-        s = "Êîëî";
+        s = "ÐšÐ¾Ð»Ð¾";
         return s;
     }
     string calc_vyp()  const
     {
         string s;
-        s = "Îïóêëèé";
+        s = "ÐžÐ¿ÑƒÐºÐ»Ð¸Ð¹";
         return s;
     }
 
