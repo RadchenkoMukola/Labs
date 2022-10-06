@@ -31,7 +31,7 @@ class Pkutnuk : public Figure{
       string calc_type() const
     {
       string s;
-       s = "П'ятикутник";
+       s = "Рџ'СЏС‚РёРєСѓС‚РЅРёРє";
       return s;
       }
 
@@ -44,7 +44,7 @@ class Pkutnuk : public Figure{
         ym = (ya + yb + yc + yd + ye) / 5;
         m.push_back(xm);
         m.push_back(ym);
-        cout << "Центр мас п'ятикутника ";
+        cout << "Р¦РµРЅС‚СЂ РјР°СЃ Рї'СЏС‚РёРєСѓС‚РЅРёРєР° ";
         return m;
       }
     string calc_vyp() const
@@ -55,9 +55,9 @@ class Pkutnuk : public Figure{
        if (riv(xa,ya,xb,yb,xc,yc,xd,yd,xe,ye) == riv(xb,yb,xa,ya,xc,yc,xd,yd,xe,ye) == riv(xc,yc,xb,yb,xa,ya,xd,yd,xe,ye) ==
        riv(xd,yd,xb,yb,xc,yc,xa,ya,xe,ye) == riv(xe,ye,xb,yb,xc,yc,xd,yd,xa,ya))
        {
-         s = "Опуклий";
+         s = "РћРїСѓРєР»РёР№";
        }
-       else s = "Не опуклий";
+       else s = "РќРµ РѕРїСѓРєР»РёР№";
        return s;
     }
 
