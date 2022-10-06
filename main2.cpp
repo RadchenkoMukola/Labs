@@ -18,64 +18,64 @@ public:
         double x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;
 
         cout << "*==================*" << endl;
-        cout << "*l Îáåð³òü ô³ãóðó l*" << endl;
+        cout << "*l ÐžÐ±ÐµÑ€Ñ–Ñ‚ÑŒ Ñ„Ñ–Ð³ÑƒÑ€Ñƒ l*" << endl;
         cout << "*==================*" << endl;
-        cout << "*l 1.Òðèêóòíèê    l*" << endl;
-        cout << "*l 2.×îòèðèêóòíèê l*" << endl;
-        cout << "*l 3.Ï'ÿòèêóòíèê  l*" << endl;
-        cout << "*l 4.Êîëî         l*" << endl;
+        cout << "*l 1.Ð¢Ñ€Ð¸ÐºÑƒÑ‚Ð½Ð¸Ðº    l*" << endl;
+        cout << "*l 2.Ð§Ð¾Ñ‚Ð¸Ñ€Ð¸ÐºÑƒÑ‚Ð½Ð¸Ðº l*" << endl;
+        cout << "*l 3.ÐŸ'ÑÑ‚Ð¸ÐºÑƒÑ‚Ð½Ð¸Ðº  l*" << endl;
+        cout << "*l 4.ÐšÐ¾Ð»Ð¾         l*" << endl;
         cout << "*==================*" << endl;
-        cout << "Îáåð³òü - ";
+        cout << "ÐžÐ±ÐµÑ€Ñ–Ñ‚ÑŒ - ";
         int x;
         cin >> x;
 
         if (x == 1)
         {
-            cout << "Ââåä³òü êîîðäèíàòè òðüîõ òî÷îê" << endl;
-            cout << "Ââåä³òü x1 ="; cin >> x1; cout << endl;
-            cout << "Ââåä³òü y1 ="; cin >> y1; cout << endl;
-            cout << "Ââåä³òü x2 ="; cin >> x2; cout << endl;
-            cout << "Ââåä³òü y2 ="; cin >> y2; cout << endl;
-            cout << "Ââåä³òü x3 ="; cin >> x3; cout << endl;
-            cout << "Ââåä³òü y3 ="; cin >> y3; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð¸ Ñ‚Ñ€ÑŒÐ¾Ñ… Ñ‚Ð¾Ñ‡Ð¾Ðº" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x1 ="; cin >> x1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y1 ="; cin >> y1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x2 ="; cin >> x2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y2 ="; cin >> y2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x3 ="; cin >> x3; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y3 ="; cin >> y3; cout << endl;
             figur = new MyTriangle(x1, y1, x2, y2, x3, y3);
         }
         else if (x == 2)
         {
-            cout << "Ââåä³òü êîîðäèíàòè ÷îòèðüîõ òî÷îê" << endl;
-            cout << "Ââåä³òü x1 ="; cin >> x1; cout << endl;
-            cout << "Ââåä³òü y1 ="; cin >> y1; cout << endl;
-            cout << "Ââåä³òü x2 ="; cin >> x2; cout << endl;
-            cout << "Ââåä³òü y2 ="; cin >> y2; cout << endl;
-            cout << "Ââåä³òü x3 ="; cin >> x3; cout << endl;
-            cout << "Ââåä³òü y3 ="; cin >> y3; cout << endl;
-            cout << "Ââåä³òü x4 ="; cin >> x4; cout << endl;
-            cout << "Ââåä³òü y4 ="; cin >> y4; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð¸ Ñ‡Ð¾Ñ‚Ð¸Ñ€ÑŒÐ¾Ñ… Ñ‚Ð¾Ñ‡Ð¾Ðº" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x1 ="; cin >> x1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y1 ="; cin >> y1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x2 ="; cin >> x2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y2 ="; cin >> y2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x3 ="; cin >> x3; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y3 ="; cin >> y3; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x4 ="; cin >> x4; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y4 ="; cin >> y4; cout << endl;
             figur = new Parallelogram(x1, y1, x2, y2, x3, y3, x4, y4);
 
         }
         else if (x == 3)
         {
-            cout << "Ââåä³òü êîîðäèíàòè ï'ÿòè òî÷îê" << endl;
-            cout << "Ââåä³òü x1 ="; cin >> x1; cout << endl;
-            cout << "Ââåä³òü y1 ="; cin >> y1; cout << endl;
-            cout << "Ââåä³òü x2 ="; cin >> x2; cout << endl;
-            cout << "Ââåä³òü y2 ="; cin >> y2; cout << endl;
-            cout << "Ââåä³òü x3 ="; cin >> x3; cout << endl;
-            cout << "Ââåä³òü y3 ="; cin >> y3; cout << endl;
-            cout << "Ââåä³òü x4 ="; cin >> x4; cout << endl;
-            cout << "Ââåä³òü y4 ="; cin >> y4; cout << endl;
-            cout << "Ââåä³òü x5 ="; cin >> x5; cout << endl;
-            cout << "Ââåä³òü y5 ="; cin >> y5; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð¸ Ð¿'ÑÑ‚Ð¸ Ñ‚Ð¾Ñ‡Ð¾Ðº" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x1 ="; cin >> x1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y1 ="; cin >> y1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x2 ="; cin >> x2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y2 ="; cin >> y2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x3 ="; cin >> x3; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y3 ="; cin >> y3; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x4 ="; cin >> x4; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y4 ="; cin >> y4; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x5 ="; cin >> x5; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y5 ="; cin >> y5; cout << endl;
             figur = new Pkutnuk(x1, y1, x2, y2, x3, y3, x4, y4, x5, y5);
 
         }
         else if (x == 4)
         {
-            cout << "Ââåä³òü êîîðäèíàòè öåíòðó òà ðàä³óñ" << endl;
-            cout << "Ââåä³òü x ="; cin >> x1; cout << endl;
-            cout << "Ââåä³òü y ="; cin >> y1; cout << endl;
-            cout << "Ââåä³òü ðàä³óñ r ="; cin >> x2; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð¸ Ñ†ÐµÐ½Ñ‚Ñ€Ñƒ Ñ‚Ð° Ñ€Ð°Ð´Ñ–ÑƒÑ" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x ="; cin >> x1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y ="; cin >> y1; cout << endl;
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ€Ð°Ð´Ñ–ÑƒÑ r ="; cin >> x2; cout << endl;
             figur = new Circle(x1, y1, x2);
         }
 
@@ -87,19 +87,19 @@ public:
         double p, a;
         string t, v;
         vector<double> m;
-        cout << "²íôîðìàö³ÿ ïðî ô³ãóðó" << endl;
+        cout << "Ð†Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–Ñ Ð¿Ñ€Ð¾ Ñ„Ñ–Ð³ÑƒÑ€Ñƒ" << endl;
         cout << "=====================" << endl;
 
-        cout << "\nSquare: ";
+        cout << "\nÐŸÐ»Ð¾Ñ‰Ð°: ";
         a = figur->calc_area();
         cout << a << endl;
-        cout << "Ïåðèìåòð: ";
+        cout << "ÐŸÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€: ";
         p = figur->calc_perimeter();
         cout << p << endl;
-        cout << "Òèï: ";
+        cout << "Ð¢Ð¸Ð¿: ";
         t = figur->calc_type();
         cout << t << endl;
-        cout << "Ñïåö³àëüíà òî÷êà: ";
+        cout << "Ð¡Ð¿ÐµÑ†Ñ–Ð°Ð»ÑŒÐ½Ð° Ñ‚Ð¾Ñ‡ÐºÐ°: ";
         m = figur->calc_specdot();
         cout << "M( ";
         for (int i = 0; i < m.size(); i++)
@@ -107,7 +107,7 @@ public:
             cout << m[i] << " ";
         }
         cout << ")" << endl;
-        cout << "Îïóêë³ñòü: ";
+        cout << "ÐžÐ¿ÑƒÐºÐ»Ñ–ÑÑ‚ÑŒ: ";
         v = figur->calc_vyp();
         cout << v << endl;
 
