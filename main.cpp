@@ -1,12 +1,17 @@
+#include "Figure.h"
 #include "UI.h"
-#include <iostream>
+#include "Figurefunctions.h"
+#include <locale>
+#include <Windows.h> 
 
-using std::cout;
-using std::cin;
-using std::endl;
+using namespace std;
 
 int main()
 {
-	 start();
-	return 0;
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    start();
+
+    return 0;
 }
